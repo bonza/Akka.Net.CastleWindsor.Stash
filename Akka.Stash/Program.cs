@@ -58,11 +58,11 @@
         }
     }
 
-    public interface IChildActor: IWithUnboundedStash
+    public interface IChildActor
     {
     }
 
-    public class ChildActor : ReceiveActor, IChildActor
+    public class ChildActor : ReceiveActor, IChildActor, IWithUnboundedStash
     {
         public IStash Stash { get; set; }
     }
